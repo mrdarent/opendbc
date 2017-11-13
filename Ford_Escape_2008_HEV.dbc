@@ -42,10 +42,15 @@ BO_ 368 RPM_or_FuelCon: 8 XXX
 BO_ 818 Accel_SOC: 8 XXX
  SG_ Forward_or_reverse : 63|8@0+ (1,0) [0|255] "" XXX
  SG_ Accel_pos : 6|16@0- (1,0) [0|65535] "" XXX
- SG_ SOC_2 : 34|19@0+ (1,0) [0|255] "" XXX
+ SG_ SOC_2 : 33|13@0+ (1,0) [0|255] "" XXX
  SG_ Unknown : 23|19@0+ (1,0) [0|1048575] "" XXX
 
 BO_ 128 Steering_Control: 8 XXX
  SG_ Steering_Torque : 7|8@0- (1,-80) [0|18446744073709552000] "" XXX
- SG_ Steering_Angle : 23|9@0- (1,-160) [0|7] "" XXX
  SG_ Unknown : 43|12@0+ (1,0) [0|16777215] "" XXX
+ SG_ Steering_Angle : 23|9@0- (1,-160) [0|7] "" XXX
+
+
+
+
+CM_ SG_ 128 Steering_Angle "Negative clockwise";
