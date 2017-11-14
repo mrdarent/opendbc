@@ -38,8 +38,10 @@ BU_: XXX
 
 BO_ 368 HV_and_FuelCon: 8 XXX
  SG_ HEV_output : 3|9@0- (1,0) [0|281474976710655] "A_or_W" XXX
- SG_ Count_Down : 19|4@0+ (1,0) [0|65535] "Minutes" XXX
- SG_ On_Off_1 : 27|4@0+ (1,0) [0|255] "" XXX
+ SG_ Count_Down : 19|2@0+ (1,0) [0|65535] "Minutes" XXX
+ SG_ Engine_Standby : 31|2@0+ (1,0) [0|15] "" XXX
+ SG_ RPM : 39|14@0+ (1,0) [0|255] "/1" XXX
+ SG_ Engine_On : 60|2@0+ (1,0) [0|255] "" XXX
 
 BO_ 818 HV_Charging: 8 XXX
  SG_ Forward_or_reverse : 63|8@0+ (1,0) [0|255] "" XXX
@@ -55,14 +57,24 @@ BO_ 128 Steering_Control: 8 XXX
 
 BO_ 768 NEW_MSG_1: 8 XXX
  SG_ NEW_SIGNAL_1 : 3|12@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 23|16@0+ (1,0) [0|255] "" XXX
 
 BO_ 786 HV_Discharging: 8 XXX
  SG_ Unknown : 3|8@0+ (1,0) [0|255] "" XXX
  SG_ HV_Charge_Disch_4 : 27|8@0+ (1,0) [0|255] "" XXX
  SG_ HV_Charge_Disch_5 : 43|20@0+ (1,0) [0|16777215] "" XXX
 
+BO_ 1024 NEW_MSG_2: 8 XXX
+ SG_ NEW_SIGNAL_1 : 7|64@0+ (1,0) [0|18446744073709552000] "" XXX
+
+BO_ 1061 NEW_MSG_3: 8 XXX
+ SG_ NEW_SIGNAL_1 : 15|8@0+ (1,0) [0|18446744073709552000] "" XXX
+ SG_ RPM_2 : 19|12@0+ (1,0) [0|65535] "/1" XXX
+
 
 
 
 CM_ SG_ 368 Count_Down "Countdown by one every minute";
+CM_ SG_ 368 Engine_Standby "1 is on";
+CM_ SG_ 368 RPM "Confirmed";
 CM_ SG_ 128 Steering_Angle "Negative clockwise";
