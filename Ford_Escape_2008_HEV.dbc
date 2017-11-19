@@ -48,7 +48,7 @@ BO_ 818 HV_Charging: 8 XXX
  SG_ HV_Charge_Disch_3 : 23|16@0+ (1,-33000) [0|1048575] "A_or_W" XXX
  SG_ HV_Motor_Power : 55|8@0+ (1,0) [0|255] "" XXX
  SG_ HV_Charge_Disch_2 : 6|12@0- (1,-60) [0|65535] "A_or_W" XXX
- SG_ Voltage : 37|10@0+ (.333,0) [0|255] "" XXX
+ SG_ Voltage : 37|10@0+ (0.333,0) [0|255] "" XXX
 
 BO_ 128 Steering_Control: 8 XXX
  SG_ Steering_Torque : 7|8@0- (1,-80) [0|18446744073709552000] "" XXX
@@ -59,10 +59,10 @@ BO_ 768 NEW_MSG_1: 8 XXX
  SG_ NEW_SIGNAL_1 : 3|12@0+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_2 : 23|16@0+ (1,0) [0|255] "" XXX
 
-BO_ 786 HV_Discharging: 8 XXX
+BO_ 786 Braking: 8 XXX
  SG_ Unknown : 3|8@0+ (1,0) [0|255] "" XXX
- SG_ HV_Charge_Disch_4 : 27|8@0+ (1,0) [0|255] "" XXX
- SG_ HV_Charge_Disch_5 : 43|20@0+ (1,0) [0|16777215] "" XXX
+ SG_ Brake_Pedal : 27|8@0+ (1,0) [0|255] "" XXX
+ SG_ Brake_System : 51|9@0+ (1,0) [0|16777215] "" XXX
 
 BO_ 1024 NEW_MSG_2: 8 XXX
  SG_ NEW_SIGNAL_2 : 39|8@0+ (1,0) [0|255] "" XXX
@@ -72,10 +72,10 @@ BO_ 1024 NEW_MSG_2: 8 XXX
  SG_ NEW_SIGNAL_5 : 55|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1061 Speedometer: 8 XXX
- SG_ NEW_SIGNAL_1 : 15|8@0+ (1,0) [0|18446744073709552000] "" XXX
  SG_ RPM_2 : 19|12@0+ (1,0) [0|65535] "/1" XXX
  SG_ NEW_SIGNAL_3 : 39|16@0+ (1,0) [0|65535] "" XXX
  SG_ Speed : 55|12@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 0|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 1279 Clock: 8 XXX
  SG_ NEW_SIGNAL_1 : 8|9@0+ (1,0) [0|511] "" XXX
@@ -101,6 +101,17 @@ BO_ 535 Odometer: 8 XXX
  SG_ NEW_SIGNAL_1 : 7|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_3 : 31|12@0+ (1,0) [0|65535] "" XXX
+
+BO_ 1200 NEW_MSG_3: 8 XXX
+ SG_ Speed : 7|12@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 31|9@0+ (1,0) [0|65535] "" XXX
+
+BO_ 384 NEW_MSG_4: 8 XXX
+ SG_ NEW_SIGNAL_1 : 4|9@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 23|5@0+ (1,0) [0|255] "" XXX
+
+BO_ 832 undefined: 8 XXX
 
 
 
