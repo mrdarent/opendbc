@@ -37,27 +37,29 @@ BU_: XXX
 
 
 BO_ 368 HV_and_FuelCon: 8 XXX
- SG_ HEV_output : 3|9@0- (1,0) [0|281474976710655] "A_or_W" XXX
  SG_ Count_Down : 19|2@0+ (1,0) [0|65535] "Minutes" XXX
- SG_ Engine_Standby : 31|2@0+ (1,0) [0|15] "" XXX
  SG_ RPM : 39|14@0+ (1,0) [0|255] "/1" XXX
  SG_ Engine_On : 60|2@0+ (1,0) [0|255] "" XXX
+ SG_ Fuel_Consumption : 31|8@0+ (1,0) [0|3] "" XXX
+ SG_ HEV_output : 3|12@0- (1,0) [0|281474976710655] "A_or_W" XXX
 
 BO_ 818 HV_Charging: 8 XXX
  SG_ Forward_or_reverse : 63|8@0+ (1,0) [0|255] "" XXX
  SG_ HV_Charge_Disch_3 : 23|16@0+ (1,-33000) [0|1048575] "A_or_W" XXX
  SG_ HV_Motor_Power : 55|8@0+ (1,0) [0|255] "" XXX
  SG_ HV_Charge_Disch_2 : 6|12@0- (1,-60) [0|65535] "A_or_W" XXX
- SG_ Voltage : 37|10@0+ (0.333,0) [0|255] "" XXX
+ SG_ Voltage : 39|16@0+ (100,0) [0|255] "" XXX
 
 BO_ 128 Steering_Control: 8 XXX
  SG_ Steering_Torque : 7|8@0- (1,-80) [0|18446744073709552000] "" XXX
  SG_ Unknown : 43|12@0+ (1,0) [0|16777215] "" XXX
  SG_ Steering_Angle : 23|9@0- (1,-160) [0|7] "" XXX
 
-BO_ 768 NEW_MSG_1: 8 XXX
+BO_ 768 HV_Battery_ECU: 8 XXX
+ SG_ NEW_SIGNAL_3 : 24|4@1+ (1,0) [0|15] "" XXX
  SG_ NEW_SIGNAL_1 : 3|12@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_2 : 23|16@0+ (1,0) [0|255] "" XXX
+ SG_ Current : 7|16@0+ (1,0) [0|15] "" XXX
+ SG_ Voltage : 23|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 786 Braking: 8 XXX
  SG_ Unknown : 3|8@0+ (1,0) [0|255] "" XXX
@@ -72,10 +74,10 @@ BO_ 1024 NEW_MSG_2: 8 XXX
  SG_ NEW_SIGNAL_5 : 55|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1061 Speedometer: 8 XXX
- SG_ RPM_2 : 19|12@0+ (1,0) [0|65535] "/1" XXX
  SG_ NEW_SIGNAL_3 : 39|16@0+ (1,0) [0|65535] "" XXX
- SG_ Speed : 55|12@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_2 : 0|8@1+ (1,0) [0|255] "" XXX
+ SG_ Accel_pedal : 0|8@1+ (1,0) [0|255] "" XXX
+ SG_ RPM_2 : 19|12@0+ (1,0) [0|65535] "/1" XXX
+ SG_ Speed : 55|16@0+ (1,0) [0|255] "" XXX
 
 BO_ 1279 Clock: 8 XXX
  SG_ NEW_SIGNAL_1 : 8|9@0+ (1,0) [0|511] "" XXX
@@ -91,9 +93,8 @@ BO_ 1136 NEW_MSG_6: 8 XXX
  SG_ NEW_SIGNAL_2 : 31|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_3 : 47|12@0+ (1,0) [0|255] "" XXX
 
-BO_ 1104 Accelerator: 8 XXX
- SG_ Speedometer : 3|8@0+ (1,0) [0|15] "" XXX
- SG_ NEW_SIGNAL_1 : 8|5@1+ (1,0) [0|3] "" XXX
+BO_ 1104 Speedometer_2: 8 XXX
+ SG_ Speedometer : 5|10@0+ (1,0) [0|15] "" XXX
  SG_ NEW_SIGNAL_2 : 23|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_3 : 39|16@0+ (1,0) [0|65535] "" XXX
 
@@ -113,10 +114,17 @@ BO_ 384 NEW_MSG_4: 8 XXX
 
 BO_ 832 undefined: 8 XXX
 
+BO_ 800 SOC: 8 XXX
+ SG_ State_of_Charge : 31|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 784 HV_Battery_Health: 8 XXX
+ SG_ NEW_SIGNAL_2 : 47|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 39|8@0+ (1,0) [0|255] "" XXX
+
 
 
 
 CM_ SG_ 368 Count_Down "Countdown by one every minute";
-CM_ SG_ 368 Engine_Standby "1 is on";
 CM_ SG_ 368 RPM "Confirmed";
 CM_ SG_ 128 Steering_Angle "Negative clockwise";
