@@ -58,8 +58,8 @@ BO_ 128 Steering_Control: 8 XXX
 BO_ 768 HV_Battery_ECU: 8 XXX
  SG_ NEW_SIGNAL_3 : 24|4@1+ (1,0) [0|15] "" XXX
  SG_ NEW_SIGNAL_1 : 3|12@0+ (1,0) [0|255] "" XXX
+ SG_ Voltage : 23|9@0+ (1,0) [0|255] "" XXX
  SG_ Current : 7|16@0+ (1,0) [0|15] "" XXX
- SG_ Voltage : 23|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 786 Braking: 8 XXX
  SG_ Unknown : 3|8@0+ (1,0) [0|255] "" XXX
