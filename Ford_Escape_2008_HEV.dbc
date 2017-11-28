@@ -57,9 +57,9 @@ BO_ 128 Steering_Control: 8 XXX
 
 BO_ 768 HV_Battery_ECU: 8 XXX
  SG_ NEW_SIGNAL_3 : 24|4@1+ (1,0) [0|15] "" XXX
- SG_ NEW_SIGNAL_1 : 3|12@0+ (1,0) [0|255] "" XXX
  SG_ Voltage : 23|9@0+ (1,0) [0|255] "" XXX
  SG_ Current : 7|16@0+ (1,0) [0|15] "" XXX
+ SG_ Motor_RPM : 3|12@0+ (1,0) [0|255] "" XXX
 
 BO_ 786 Braking: 8 XXX
  SG_ Unknown : 3|8@0+ (1,0) [0|255] "" XXX
@@ -74,10 +74,10 @@ BO_ 1024 NEW_MSG_2: 8 XXX
  SG_ NEW_SIGNAL_5 : 55|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1061 Speedometer: 8 XXX
- SG_ NEW_SIGNAL_3 : 39|16@0+ (1,0) [0|65535] "" XXX
- SG_ Accel_pedal : 0|8@1+ (1,0) [0|255] "" XXX
- SG_ RPM_2 : 19|12@0+ (1,0) [0|65535] "/1" XXX
- SG_ Speed : 55|16@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 39|12@0+ (1,0) [0|65535] "" XXX
+ SG_ Wheel_Speed_2 : 55|12@0+ (1,-655) [0|255] "" XXX
+ SG_ Wheel_Speed_1 : 7|12@0+ (1,0) [0|255] "" XXX
+ SG_ RPM_2 : 23|13@0+ (1,0) [0|65535] "/1" XXX
 
 BO_ 1279 Clock: 8 XXX
  SG_ NEW_SIGNAL_1 : 8|9@0+ (1,0) [0|511] "" XXX
@@ -94,14 +94,14 @@ BO_ 1136 NEW_MSG_6: 8 XXX
  SG_ NEW_SIGNAL_3 : 47|12@0+ (1,0) [0|255] "" XXX
 
 BO_ 1104 Speedometer_2: 8 XXX
- SG_ Speedometer : 5|10@0+ (1,0) [0|15] "" XXX
- SG_ NEW_SIGNAL_2 : 23|16@0+ (1,0) [0|65535] "" XXX
- SG_ NEW_SIGNAL_3 : 39|16@0+ (1,0) [0|65535] "" XXX
+ SG_ Speedometer : 7|12@0+ (1,0) [0|15] "" XXX
+ SG_ NEW_SIGNAL_2 : 31|8@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_3 : 39|12@0+ (1,0) [0|65535] "" XXX
 
 BO_ 535 Odometer: 8 XXX
- SG_ NEW_SIGNAL_1 : 7|16@0+ (1,0) [0|65535] "" XXX
- SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|65535] "" XXX
- SG_ NEW_SIGNAL_3 : 31|12@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_1 : 7|12@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_2 : 23|12@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_3 : 39|12@0+ (1,0) [0|65535] "" XXX
 
 BO_ 1200 NEW_MSG_3: 8 XXX
  SG_ Speed : 7|12@0+ (1,0) [0|255] "" XXX
